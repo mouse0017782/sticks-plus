@@ -1,37 +1,18 @@
 {
 	"schemaVersion": 1,
-	"id": "sticks-plus",
+	"id": "sticksplus",
 	"version": "${version}",
 	"name": "Sticks Plus",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/sticks-plus/icon.png",
+	"description": "Adds more sticks.",
+	"authors": ["Reed"],
+	"license": "MIT",
+	"icon": "assets/sticksplus/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"com.reed.sticksplus.SticksPlus"
-		],
-		"client": [
-			"com.reed.sticksplus.SticksPlusClient"
-		],
-		"fabric-datagen": [
-			"com.reed.sticksplus.SticksPlusDataGenerator"
 		]
 	},
-	"mixins": [
-		"sticks-plus.mixins.json",
-		{
-			"config": "sticks-plus.client.mixins.json",
-			"environment": "client"
-		}
-	],
 	"depends": {
 		"fabricloader": ">=0.18.4",
 		"minecraft": "~1.21.11",

@@ -1,7 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "sticksplus:item/kb_stick"
+    "layer0": "minecraft:item/stick"
   }
 }
-
