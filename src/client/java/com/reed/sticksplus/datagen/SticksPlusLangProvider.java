@@ -22,5 +22,6 @@ public class SticksPlusLangProvider extends FabricLanguageProvider {
             TranslationBuilder builder
     ) {
         builder.add(ModItems.KB_STICK, "Knockback Stick");
+        builder.add(ModItems.ICE_STICK, "Ice Stick");
     }
 }

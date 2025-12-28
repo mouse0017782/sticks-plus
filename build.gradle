@@ -17,24 +17,17 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"sticksplus" {
+		sticksplus {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}
 	}
 }
 
+
 fabricApi {
 	configureDataGeneration {
 		client = true
-	}
-}
-
-sourceSets {
-	main {
-		resources {
-			srcDir "src/main/generated"
-		}
 	}
 }
 

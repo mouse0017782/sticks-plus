@@ -12,12 +12,13 @@
 		"main": [
 			"com.reed.sticksplus.SticksPlus"
 		],
-		"fabric-datagen": [
-			"com.reed.sticksplus.datagen.SticksPlusDataGenerator"
-		],
 		"client": [
 			"com.reed.sticksplus.SticksPlusClient"
-		]
+		],
+		"fabric-datagen": [
+			"com.reed.sticksplus.datagen.SticksPlusDataGenerator"
+			]
+
 	},
 	"depends": {
 		"fabricloader": ">=0.18.4",
