@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#",
+        "/",
+        "#"
+    ],
+    "key": {
+        "#": "minecraft:dragon_breath",
+        "/": "minecraft:stick"
+    },
+    "result": {
+        "id": "sticksplus:kb_stick",
+        "count": 1
+    }
+}
+w

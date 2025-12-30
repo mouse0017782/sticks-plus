@@ -10,5 +10,6 @@ public class SticksPlusDataGenerator implements DataGeneratorEntrypoint {
 
 		pack.addProvider(SticksPlusModelProvider::new);
 		pack.addProvider(SticksPlusLangProvider::new);
+		pack.addProvider(SticksPlusAdvancementProvider::new);
 	}
 }

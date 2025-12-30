@@ -7,19 +7,18 @@ import net.minecraft.item.ItemStack;
 
 public class KnockbackStickItem extends Item {
 
-    private double knockbackStrength = 15;
+    private final double knockbackStrength;
 
-    public KnockbackStickItem(Settings settings, double v) {
+    public KnockbackStickItem(Settings settings, double knockbackStrength) {
         super(settings);
+        this.knockbackStrength = knockbackStrength;
     }
 
     @Override
     public void postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
-
         // Server-side only
         if (!attacker.getEntityWorld().isClient()) {
-
-            // Direction away from attacker
+            // Direction from attacker to target
             double dx = target.getX() - attacker.getX();
             double dz = target.getZ() - attacker.getZ();
 
@@ -28,18 +27,19 @@ public class KnockbackStickItem extends Item {
                 dx /= mag;
                 dz /= mag;
 
-                // BIG knockback
-                target.takeKnockback(knockbackStrength, dx, dz);
+                // Push target away from attacker
+                target.takeKnockback(knockbackStrength, -dx, -dz);
             }
 
-            // Damage the item (10 uses total)
+
+            // Damage item by 1
             EquipmentSlot slot = attacker.getMainHandStack() == stack
                     ? EquipmentSlot.MAINHAND
                     : EquipmentSlot.OFFHAND;
 
+            // 1.21.x-safe overload
             stack.damage(1, attacker, slot);
         }
-
 
     }
 }
